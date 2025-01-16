@@ -93,11 +93,11 @@
                                         class="font-medium text-blue-600 hover:underline"
                                         >Edit</Link
                                     >
-                                    <Link
+                                    <button
                                         @click="showDeleteConfirmation(cost)"
                                         as="button"
                                         class="ml-3 font-medium text-red-600 hover:underline"
-                                        >Delete</Link
+                                        >Delete</button
                                     >
                                 </td>
                             </tr>
