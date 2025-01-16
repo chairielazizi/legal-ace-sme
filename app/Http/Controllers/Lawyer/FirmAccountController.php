@@ -176,7 +176,7 @@ class FirmAccountController extends Controller
             });
 
             return redirect()->route('lawyer.firm-accounts.show', ['firm_account' => $request->bank_account_id])
-                ->with('successMessage', 'Successfully updated the transaction.');
+                ->with('successMessage', 'Successfully updated the transaction record.');
         } catch (\Exception $e) {
             // Clean up the uploaded file if an error occurs
             if ($filePath != null && Storage::exists($filePath)) {
@@ -188,7 +188,7 @@ class FirmAccountController extends Controller
                 return Inertia::render('Lawyer/FirmAccount/Edit', ['errors' => $request->errors()]);
             }
 
-            return back()->with('errorMessage', 'Failed to update invoice payment: ' . $e->getMessage());
+            return back()->with('errorMessage', 'Failed to update transaction record ' . $e->getMessage());
         }
     }
     public function detail(Request $request, $acc_number)
@@ -506,7 +506,7 @@ class FirmAccountController extends Controller
         $firmAccount->delete();
 
         return redirect()->route('lawyer.firm-accounts.show', ['firm_account' => $bank_account_id])
-            ->with('successMessage', 'Successfully deleted the account.');
+            ->with('successMessage', 'Successfully deleted the record.');
     }
 
     public function totalBalance()

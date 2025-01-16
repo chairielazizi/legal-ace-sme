@@ -241,7 +241,7 @@ class OperationalCostController extends Controller
                     'payment_method' => $request->payment_method,
                 ]);
 
-            return redirect()->route('lawyer.operational-cost.index')->with('successMessage', 'Successfully updated operational cost.');
+            return redirect()->route('lawyer.operational-cost.index')->with('successMessage', 'Successfully update the record.');
         } catch (\Exception $e) {
             // Clean up the uploaded file if an error occurs
             if ($filePath != null && Storage::exists($filePath)) {
@@ -253,7 +253,7 @@ class OperationalCostController extends Controller
                 return Inertia::render('Lawyer/OperationalCost/Edit', ['errors' => $request->errors()]);
             }
 
-            return back()->with('errorMessage', 'Failed to update operational cost: ' . $e->getMessage());
+            return back()->with('errorMessage', 'Failed to update the record: ' . $e->getMessage());
         }
     }
 
@@ -267,6 +267,6 @@ class OperationalCostController extends Controller
 
         $operationalCost->delete();
 
-        return redirect()->route('lawyer.operational-cost.index')->with('successMessage', 'Successfully deleted the cost.');
+        return redirect()->route('lawyer.operational-cost.index')->with('successMessage', 'Successfully deleted the cost record.');
     }
 }

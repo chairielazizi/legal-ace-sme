@@ -80,7 +80,7 @@
                         />
                         <text-input
                             v-model="form.amount"
-                            :error="form.errors.company_name"
+                            :error="form.errors.amount"
                             :type="'number'"
                             label="Amount"
                             step="0.01"
