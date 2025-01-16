@@ -29,6 +29,7 @@
         "@inertiajs/inertia": "^0.11.0",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.2.7",
+        "@vercel/php": "github:vercel-community/php",
         "chart.js": "^4.4.7",
         "class-variance-authority": "^0.6.0",
         "eslint": "^9.9.0",

@@ -19,3 +19,4 @@ public/mix-manifest.json
 public/css
 public/js
 *.DS_Store
+.vercel
