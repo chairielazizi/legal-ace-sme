@@ -119,11 +119,11 @@ class ClientAccountController extends Controller
             if (str_contains("funds in", $request->transaction_type)) {
                 $input1['debit'] = $request->amount;
                 $input1['credit'] = 0;
-                $input['balance'] = $request->amount;
+                $input1['balance'] = $request->amount;
             } else {
                 $input1['debit'] = 0;
                 $input1['credit'] = $request->amount;
-                $input['balance'] = $request->amount;
+                $input1['balance'] = $request->amount;
                 $input1['transaction_id'] = $uniqueId;
 
                 FirmAccount::create([
@@ -185,11 +185,11 @@ class ClientAccountController extends Controller
             if (str_contains("funds in", $request->transaction_type)) {
                 $input1['debit'] = $request->amount;
                 $input1['credit'] = 0;
-                $input['balance'] = $request->amount;
+                $input1['balance'] = $request->amount;
             } else {
                 $input1['debit'] = 0;
                 $input1['credit'] = $request->amount;
-                $input['balance'] = $request->amount;
+                $input1['balance'] = $request->amount;
             }
 
             // Update the client account record
