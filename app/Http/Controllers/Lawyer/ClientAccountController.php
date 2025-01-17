@@ -119,9 +119,11 @@ class ClientAccountController extends Controller
             if (str_contains("funds in", $request->transaction_type)) {
                 $input1['debit'] = $request->amount;
                 $input1['credit'] = 0;
+                $input['balance'] = $request->amount;
             } else {
                 $input1['debit'] = 0;
                 $input1['credit'] = $request->amount;
+                $input['balance'] = $request->amount;
                 $input1['transaction_id'] = $uniqueId;
 
                 FirmAccount::create([
@@ -133,6 +135,7 @@ class ClientAccountController extends Controller
                     'upload' => $input1['upload'],
                     'debit' => $request->amount,
                     'credit' => 0,
+                    'balance' => $request->amount,
                     'payment_method' => $request->payment_method,
                     'remarks' => $request->reference,
                     'transaction_id' => $uniqueId,
@@ -182,9 +185,11 @@ class ClientAccountController extends Controller
             if (str_contains("funds in", $request->transaction_type)) {
                 $input1['debit'] = $request->amount;
                 $input1['credit'] = 0;
+                $input['balance'] = $request->amount;
             } else {
                 $input1['debit'] = 0;
                 $input1['credit'] = $request->amount;
+                $input['balance'] = $request->amount;
             }
 
             // Update the client account record
@@ -203,6 +208,7 @@ class ClientAccountController extends Controller
                         'document_number' => $request->document_number,
                         'debit' => $request->amount,
                         'credit' => 0,
+                        'balance' => $request->amount,
                         'payment_method' => $request->payment_method,
                         'remarks' => $request->reference,
                     ]);
@@ -251,7 +257,7 @@ class ClientAccountController extends Controller
             ->when($request->input('search'), function ($query, $search) {
                 $amount = (int) $search;
                 if ($amount) {
-                    $query->where('debit', '>=', $amount);
+                    $query->where('balance', '>=', $amount);
                 } else {
                     $query->where('description', 'like', "%{$search}%")
                         ->orWhere('transaction_type', 'like', "%{$search}%")

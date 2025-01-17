@@ -117,9 +117,11 @@ class FirmAccountController extends Controller
             if (str_contains("funds in", $request->transaction_type)) {
                 $input['debit'] = $request->amount;
                 $input['credit'] = 0;
+                $input['balance'] = $request->amount;
             } else {
                 $input['debit'] = 0;
                 $input['credit'] = $request->amount;
+                $input['balance'] = $request->amount;
             }
 
             DB::transaction(function () use ($input) {
@@ -165,9 +167,11 @@ class FirmAccountController extends Controller
             if (str_contains("funds in", $request->transaction_type)) {
                 $input['debit'] = $request->amount;
                 $input['credit'] = 0;
+                $input['balance'] = $request->amount;
             } else {
                 $input['debit'] = 0;
                 $input['credit'] = $request->amount;
+                $input['balance'] = $request->amount;
             }
 
             // Update the firm account record
@@ -217,7 +221,7 @@ class FirmAccountController extends Controller
             ->when($request->input('search'), function ($query, $search) {
                 $amount = (int) $search;
                 if ($amount) {
-                    $query->where('debit', '>=', $amount);
+                    $query->where('balance', '>=', $amount);
                 } else {
 
                     $query->where('description', 'like', "%{$search}%")
@@ -230,6 +234,7 @@ class FirmAccountController extends Controller
             })
             ->where('bank_account_id', 'like', "%{$acc_number}%")
             ->orWhere('description', 'like', "%payment%")
+            ->orderBy('date', 'desc')
             ->paginate(10)
             ->withQueryString()
             ->through(fn($acc) => [

@@ -165,6 +165,7 @@ class OperationalCostController extends Controller
                 'upload' => $filePath,
                 'debit' => 0,
                 'credit' => $request->amount,
+                'balance' => $request->amount,
                 'payment_method' => $request->payment_method,
                 'remarks' => "",
                 'created_by' => Auth::id(),
@@ -238,6 +239,7 @@ class OperationalCostController extends Controller
                     'transaction_type' => "funds out",
                     'document_number' => $request->document_number,
                     'credit' => $request->amount,
+                    'balance' => $request->amount,
                     'payment_method' => $request->payment_method,
                 ]);
 
