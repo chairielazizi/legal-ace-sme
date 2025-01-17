@@ -67,7 +67,7 @@
                     class="text-sm text-gray-700 hover:bg-gray-100 focus-within:bg-gray-100"
                 >
                     <td class="border-t px-6 py-4 whitespace-nowrap pl-10">
-                        {{ item.label }}
+                        {{ item.label }} - {{ formatString(item.description) }}
                     </td>
                     <td class="border-t px-6 py-4 whitespace-nowrap text-right">
                         {{ formatToTwoDecimal(item.debit) }}
@@ -135,6 +135,18 @@
                     </td>
                 </tr>
                 <tr
+                    v-for="item in listGroupNonOperatingIncome"
+                    class="text-sm text-gray-700 hover:bg-gray-100 focus-within:bg-gray-100"
+                >
+                    <td class="border-t px-6 py-4 whitespace-nowrap pl-10">
+                        <!-- {{ item.label }} - {{ item.remarks }} -->
+                        {{ item.label }} - {{ formatString(item.description) }}
+                    </td>
+                    <td class="border-t px-6 py-4 whitespace-nowrap text-right">
+                        {{ formatToTwoDecimal(item.debit) }}
+                    </td>
+                </tr>
+                <tr
                     class="text-sm text-gray-700 hover:bg-gray-100 focus-within:bg-gray-100 bg-slate-100 font-bold"
                 >
                     <td class="border-t px-6 py-4 whitespace-nowrap pl-10">
@@ -152,6 +164,17 @@
                     </td>
                     <td class="border-t px-6 py-4 whitespace-nowrap text-right">
                         -
+                    </td>
+                </tr>
+                <tr
+                    v-for="item in listGroupNonOperatingExpense"
+                    class="text-sm text-gray-700 hover:bg-gray-100 focus-within:bg-gray-100"
+                >
+                    <td class="border-t px-6 py-4 whitespace-nowrap pl-10">
+                        {{ item.label }} - {{ formatString(item.description) }}
+                    </td>
+                    <td class="border-t px-6 py-4 whitespace-nowrap text-right">
+                        {{ formatToTwoDecimal(item.credit) }}
                     </td>
                 </tr>
                 <tr
@@ -189,6 +212,8 @@ export default {
     props: {
         totalOperatingIncome: String,
         listGroupOperatingIncome: Object,
+        listGroupNonOperatingIncome: Object,
+        listGroupNonOperatingExpense: Object,
         totalEmployeeSalary: String,
         listOperatingExpense: Object,
         totalOperatingExpense: String,

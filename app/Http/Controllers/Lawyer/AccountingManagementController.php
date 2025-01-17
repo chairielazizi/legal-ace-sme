@@ -202,6 +202,54 @@ class AccountingManagementController extends Controller
         $totalOperatingExpense = $totalListOperatingExpense;
 
         //Start of Non-Operating Transaction
+        // Grouped list for non-operating income
+        $listGroupNonOperatingIncome = FirmAccount::query()
+            ->rightJoin('bank_accounts as b', 'firm_account.bank_account_id', '=', 'b.bank_account_type_id')
+            ->select(
+                'b.label',
+                'firm_account.bank_account_id',
+                'firm_account.description',
+                'firm_account.transaction_type',
+                'firm_account.remarks',
+                DB::raw('SUM(firm_account.debit) AS debit'),
+                DB::raw('SUM(firm_account.credit) AS credit')
+            )
+            ->where('description', 'like', 'investing')
+            ->where('transaction_type', 'like', 'funds in')
+            ->whereBetween('date', [$startDate, $endDate])
+            ->groupBy(
+                'firm_account.bank_account_id',
+                'b.label',
+                'firm_account.description',
+                'firm_account.transaction_type',
+                'firm_account.remarks',
+            )
+            ->get();
+
+        // Grouped list for non-operating expenses
+        $listGroupNonOperatingExpense = FirmAccount::query()
+            ->rightJoin('bank_accounts as b', 'firm_account.bank_account_id', '=', 'b.bank_account_type_id')
+            ->select(
+                'b.label',
+                'firm_account.bank_account_id',
+                'firm_account.description',
+                'firm_account.transaction_type',
+                'firm_account.remarks',
+                DB::raw('SUM(firm_account.debit) AS debit'),
+                DB::raw('SUM(firm_account.credit) AS credit')
+            )
+            ->where('description', 'like', 'investing')
+            ->where('transaction_type', 'like', 'funds out')
+            ->whereBetween('date', [$startDate, $endDate])
+            ->groupBy(
+                'firm_account.bank_account_id',
+                'b.label',
+                'firm_account.description',
+                'firm_account.transaction_type',
+                'firm_account.remarks',
+            )
+            ->get();
+
         $totalNonOperatingIncome = FirmAccount::query()
             ->where('description', 'like', 'investing')
             ->where('transaction_type', 'like', 'funds in')
@@ -222,6 +270,8 @@ class AccountingManagementController extends Controller
         return  [
             'totalOperatingIncome' => $totalOperatingIncome,
             'listGroupOperatingIncome' => $listGroupOperatingIncome,
+            'listGroupNonOperatingIncome' => $listGroupNonOperatingIncome,
+            'listGroupNonOperatingExpense' => $listGroupNonOperatingExpense,
             // 'totalEmployeeSalary' => $totalEmployeeSalary,
             'listOperatingExpense' => $ListOperatingExpense,
             'totalOperatingExpense' => $totalOperatingExpense,
