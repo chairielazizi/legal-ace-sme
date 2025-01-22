@@ -140,7 +140,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('operational-cost-types', [OperationalCostTypesController::class, 'store'])
             ->name('operational-cost-types.store');
 
-        // BALANCE SHEET
+        // ACCOUNTING MANAGEMENT
         Route::get('accounting-management/cash', [AccountingManagementController::class, 'cash_flow']);
         Route::get('accounting-management/balance', [AccountingManagementController::class, 'balance_sheet']);
         Route::get('accounting-management/profit', [AccountingManagementController::class, 'profit_and_loss']);

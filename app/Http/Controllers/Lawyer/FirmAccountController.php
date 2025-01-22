@@ -128,7 +128,8 @@ class FirmAccountController extends Controller
                 FirmAccount::create($input);
             });
 
-            return redirect()->route('lawyer.firm-accounts.show', ['firm_account' => $request->bank_account_id])->with('successMessage', 'Successfully added new transaction record.');
+            return redirect()->route('lawyer.firm-accounts.show', ['firm_account' => $request->bank_account_id])
+                ->with('successMessage', 'Successfully added new transaction record.');
         } catch (\Exception $e) {
             if (Storage::exists($filePath)) {
                 Storage::delete($filePath);
