@@ -34,6 +34,7 @@
         "@vercel/static-build": "^2.5.41",
         "chart.js": "^4.4.7",
         "class-variance-authority": "^0.6.0",
+        "cross-env": "^7.0.3",
         "eslint": "^9.9.0",
         "file-saver": "^2.0.5",
         "gsap": "^3.12.1",
