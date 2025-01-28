@@ -6,19 +6,42 @@
   },
   "routes": [
       {
-          "src": "/(.*)",
-          "dest": "/api/index.php"
+        "src": "/js/(.*)",
+        "dest": "/public/js/$1"
       },
       {
-          "src": "/public/(.*)",
-          "dest": "/public/$1"
+          "src": "/css/(.*)",
+          "dest": "/public/css/$1"
+      },
+      {
+          "src": "/images/(.*)",
+          "dest": "/public/images/$1"
+      },
+      {
+        "src": "/favicon.ico",
+        "dest": "/public/favicon.ico"
+      },
+      {
+        "src": "/favicon.png",
+        "dest": "/public/favicon.png"
+      },
+      {
+        "src": "/public/(.*)",
+        "dest": "/public/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+      },
+      {
+          "src": "/api/index.php",
+          "dest": "/api/index.php"
       }
   ],
   "env": {
       "APP_ENV": "production",
       "APP_DEBUG": "true",
       "APP_URL": "https://legal-ace-sme.vercel.app/",
-      "APP_KEY": "base64:wtvgDhXi6ZsLuMlwChlWEQP/NXk1ko31hvvKSDfSne8=",
 
       "APP_CONFIG_CACHE": "/tmp/config.php",
       "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -30,5 +53,6 @@
       "CACHE_DRIVER": "array",
       "LOG_CHANNEL": "stderr",
       "SESSION_DRIVER": "cookie"
-  }
+  },
+  "public": "public"
 }

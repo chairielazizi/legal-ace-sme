@@ -22,29 +22,29 @@ class LoginController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
- 
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
- 
+
             $userRoles = User::findOrFail(Auth::id())->userRoles;
             $roles = array();
 
-            foreach($userRoles as $userRole) {
+            foreach ($userRoles as $userRole) {
                 array_push($roles, $userRole->role->slug);
             }
 
             $accessExpiryDate = Auth::user()->access_expiry_date;
 
-            if($accessExpiryDate != null && Carbon::now()->isAfter($accessExpiryDate)) {
+            if ($accessExpiryDate != null && Carbon::now()->isAfter($accessExpiryDate)) {
                 return back()->withErrors([
                     'email' => 'Your account access has expired.',
                 ]);
             }
 
-            if($roles != null) {   
-                if(Auth::check() && in_array("admin", $roles)){
+            if ($roles != null) {
+                if (Auth::check() && in_array("admin", $roles)) {
                     return redirect()->intended('/admin/dashboard');
-                } elseif(Auth::check() && in_array("lawyer", $roles)){
+                } elseif (Auth::check() && in_array("lawyer", $roles)) {
                     return redirect()->intended('/lawyer/dashboard');
                 }
             } else {
@@ -52,9 +52,8 @@ class LoginController extends Controller
                     'email' => 'The user is not assigned a role.',
                 ]);
             }
-            
         }
- 
+
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
@@ -64,6 +63,7 @@ class LoginController extends Controller
     {
         Auth::logout();
 
-        return redirect()->route('login');
+        // return redirect()->route('login');
+        return Inertia::location('/login'); //fix for deploy
     }
 }

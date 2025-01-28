@@ -186,7 +186,11 @@ export default {
     methods: {
         store() {
             if (this.form.isDirty) {
-                this.form.post(`/lawyer/client`);
+                this.form.post("/lawyer/client", {
+                    onSuccess: () => {
+                        window.location.href = `${window.location.origin}/lawyer/client`;
+                    },
+                });
             } else {
                 alert("You need to fill in the form first.");
             }
