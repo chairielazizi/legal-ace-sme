@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/.bin/mix --production",
         "watch": "mix watch"
     },
     "devDependencies": {
@@ -30,12 +31,14 @@
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.2.7",
         "@vercel/php": "github:vercel-community/php",
+        "@vercel/static-build": "^2.5.41",
         "chart.js": "^4.4.7",
         "class-variance-authority": "^0.6.0",
         "eslint": "^9.9.0",
         "file-saver": "^2.0.5",
         "gsap": "^3.12.1",
         "jquery": "^3.6.4",
+        "php-cli": "^0.1.5",
         "puppeteer": "^20.5.0",
         "uuid": "^9.0.0",
         "v-money": "^0.8.1",
