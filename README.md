@@ -1,64 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Project Title
+**Development of a Web Application Accounting System for Small and Medium-Sized Legal Firms**
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Objective
+The primary aim of this project is to create a cost-effective, efficient web application accounting system tailored for small and medium-sized legal firms to streamline their financial documentation and reporting procedures. This system addresses the unique accounting requirements of law firms, which differ from other organizations due to Bar Council regulations and the need for specialized processes.
 
-## About Laravel
+## Background
+Smaller law firms often find existing accounting software too expensive and not fully compatible with their specific needs. For example, Fan Chen Partnership, a small law firm in Kuala Lumpur, faces significant time and effort in manually reviewing records. This project intends to mitigate such issues by providing a tailored solution.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Development Framework
+The project employs the Agile Scrum Framework for development, gathering requirements through system comparisons and stakeholder interviews. The system focuses on three core functionalities:
+- **Accounting Management**
+- **Case File Management**
+- **Client Management**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Technology Stack
+- **Backend:** Laravel framework
+- **Frontend:** Vue.js framework
+- **Integration:** Inertia.js seamless integration between Laravel and Vue.js, facilitating the development of single-page applications without the need for client-side routing and APIs.
+- **User Interface:** Developed using HTML, CSS, and JavaScript with a component-based approach in Vue.js for better productivity and reusability.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Project Repository
+The complete source code is available on GitHub: [legal-ace-sme](https://github.com/chairielazizi/legal-ace-sme). The repository includes folders for app, database, routes, and other related files for both frontend and backend development.
 
-## Learning Laravel
+## Summary
+By leveraging modern web development frameworks and methodologies, this project delivers a robust and user-friendly accounting system tailored for small legal firms, enhancing their operational efficiency and allowing them to better manage their finances, cases, and clients.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<!--## Screen Shot
+-----------------------
+![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/login_screen.png) Login Screen | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/dashboard.PNG) Dashboard |
+|-|-|
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/user_profile.PNG) User Profile | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/student_profile.PNG) Student Profile |
+|-|-|
 
-## Laravel Sponsors
+![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/id_card.PNG) ID Card | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/print_id_card.PNG) Print ID Card | 
+|-|-|
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/monthly_attendence_report.PNG) Student Attendence Report | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/payment_dashboard.PNG) Payment Dashboard |
+|-|-|
 
-### Premium Partners
+![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/payment_status_list.PNG) Payment Status List | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/payment_money_recept.PNG) Payment Money Recept |
+|-|-|
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/sms_dashboard.PNG) SMS Dashboard | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/compare_user_activity_data.PNG) Compare User Activity |
+|-|-|
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/theme_change.PNG) Multiple Themes | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/update_setting.png) Update Institute Information |
+|-|-|
