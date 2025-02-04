@@ -23,7 +23,15 @@ The project employs the Agile Scrum Framework for development, gathering require
 The complete source code is available on GitHub: [legal-ace-sme](https://github.com/chairielazizi/legal-ace-sme). The repository includes folders for app, database, routes, and other related files for both frontend and backend development.
 
 ## Summary
-By leveraging modern web development frameworks and methodologies, this project delivers a robust and user-friendly accounting system tailored for small legal firms, enhancing their operational efficiency and allowing them to better manage their finances, cases, and clients.
+By leveraging modern web development frameworks and methodologies, this project delivers a robust and user-friendly accounting system tailored for small legal firms, enhancing their operational efficiency and allowing them to better manage their finances, cases, and clients.d
+
+--------------------------
+### Login Credentials
+Website link: https://legal-ace-sme.vercel.app/
+| Role | Username | Password |
+| --- | --- | --- |
+| Lawyer | lawyer@fanchen.com | password |
+| Admin | admin@fanchen.com | password |
 
 <!--## Screen Shot
 -----------------------
