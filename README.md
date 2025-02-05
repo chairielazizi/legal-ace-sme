@@ -33,25 +33,7 @@ Website link: https://legal-ace-sme.vercel.app/
 | Lawyer | lawyer@fanchen.com | password |
 | Admin | admin@fanchen.com | password |
 
-<!--## Screen Shot
+## Screen Shot
 -----------------------
-![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/login_screen.png) Login Screen | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/dashboard.PNG) Dashboard |
-|-|-|
-
-![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/user_profile.PNG) User Profile | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/student_profile.PNG) Student Profile |
-|-|-|
-
-![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/id_card.PNG) ID Card | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/print_id_card.PNG) Print ID Card | 
-|-|-|
-
-![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/monthly_attendence_report.PNG) Student Attendence Report | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/payment_dashboard.PNG) Payment Dashboard |
-|-|-|
-
-![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/payment_status_list.PNG) Payment Status List | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/payment_money_recept.PNG) Payment Money Recept |
-|-|-|
-
-![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/sms_dashboard.PNG) SMS Dashboard | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/compare_user_activity_data.PNG) Compare User Activity |
-|-|-|
-
-![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/theme_change.PNG) Multiple Themes | ![screenshot](https://raw.githubusercontent.com/amirhamza05/Student-Management-System/master/screen_shot/update_setting.png) Update Institute Information |
+![screenshot](https://raw.githubusercontent.com/chairielazizi/NoteListApp/master/img/ss1.png) Home | ![screenshot](https://raw.githubusercontent.com/chairielazizi/NoteListApp/master/img/ss2.png) Index Note page |
 |-|-|
