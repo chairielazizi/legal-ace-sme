@@ -33,7 +33,19 @@ Website link: https://legal-ace-sme.vercel.app/
 | Lawyer | lawyer@fanchen.com | password |
 | Admin | admin@fanchen.com | password |
 
-## Screen Shot
+### Screen Shot
 -----------------------
-![screenshot](https://raw.githubusercontent.com/chairielazizi/NoteListApp/master/img/ss1.png) Home | ![screenshot](https://raw.githubusercontent.com/chairielazizi/NoteListApp/master/img/ss2.png) Index Note page |
+![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/login.png) Login Page | ![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/register.png) Register page |
+|-|-|
+
+![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/lawyer-dashboard.png) Lawyer Dashboard | ![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/firm-account.png) Firm Account detail |
+|-|-|
+
+![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/index-accounting.png) Accounting Page | ![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/balance-sheet.png) Balance Sheet report |
+|-|-|
+
+![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/create-client.png) Add/Edit Client | ![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/view-client.png) View Client |
+|-|-|
+
+![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/index-cost.png) Index Operational Cost | ![screenshot](https://raw.githubusercontent.com/chairielazizi/legal-ace-sme/master/zScreenshots/view-cost.png) View Operational Cost |
 |-|-|
